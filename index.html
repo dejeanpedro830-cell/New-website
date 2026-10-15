@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b16">
+  <meta name="description" content="Discover useful AI tools for studying, creating, coding, and building your next big idea.">
+  <title>Aivanta AI — Discover your next advantage</title>
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Aivanta AI home">
+      <img src="logo.svg" alt="" width="38" height="38">
+      <span>Aivanta<span class="brand-ai"> AI</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#explore">Explore tools</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#submit">Suggest a tool</a>
+    </nav>
+    <button class="header-favorites" id="favoritesToggle" type="button" aria-pressed="false">
+      <span aria-hidden="true">♡</span> Saved <span class="saved-count" id="savedCount">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow"><span class="pulse-dot"></span> YOUR AI DISCOVERY HUB</div>
+      <h1>Find the AI tool<br>that <span class="gradient-text">moves you forward.</span></h1>
+      <p class="hero-copy">A hand-picked directory of AI tools for learning, creating, building, and getting more done. Less searching. More making.</p>
+      <div class="hero-search" role="search">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="searchInput" type="search" placeholder="Search tools, tasks, or categories..." aria-label="Search AI tools">
+        <kbd>/</kbd>
+      </div>
+      <div class="hero-tags" aria-label="Popular searches">
+        <span>Popular:</span>
+        <button class="quick-search" data-query="writing">Writing</button>
+        <button class="quick-search" data-query="image">Image generation</button>
+        <button class="quick-search" data-query="coding">Coding</button>
+        <button class="quick-search" data-query="study">Study</button>
+      </div>
+      <div class="hero-stats">
+        <div><strong id="toolCount">24+</strong><span>tools to explore</span></div>
+        <div><strong>8</strong><span>categories</span></div>
+        <div><strong>R0</strong><span>to get started</span></div>
+      </div>
+      <div class="hero-orbit orbit-a"></div><div class="hero-orbit orbit-b"></div>
+      <div class="hero-spark spark-a">✦</div><div class="hero-spark spark-b">✧</div>
+    </section>
+
+    <section class="directory section-wrap" id="explore">
+      <div class="section-heading">
+        <div><div class="section-kicker">THE DIRECTORY</div><h2>Explore AI tools</h2><p>Find the right tool for whatever you're working on.</p></div>
+        <div class="sort-wrap">
+          <label for="sortSelect">Sort by</label>
+          <select id="sortSelect"><option value="featured">Featured</option><option value="name">Name A–Z</option></select>
+        </div>
+      </div>
+      <div class="filter-row" id="categoryFilters" aria-label="Filter by category">
+        <button class="filter-chip active" data-category="All">✦ All tools</button>
+        <button class="filter-chip" data-category="Writing">✎ Writing</button>
+        <button class="filter-chip" data-category="Images">▧ Images</button>
+        <button class="filter-chip" data-category="Video">▶ Video</button>
+        <button class="filter-chip" data-category="Coding">⌘ Coding</button>
+        <button class="filter-chip" data-category="Study">✧ Study</button>
+        <button class="filter-chip" data-category="Research">⌕ Research</button>
+        <button class="filter-chip" data-category="Design">◈ Design</button>
+        <button class="filter-chip" data-category="Productivity">◷ Productivity</button>
+      </div>
+      <div class="results-line"><span id="resultsCount">Showing all tools</span><button class="clear-filters" id="clearFilters" type="button">Clear filters ↗</button></div>
+      <div class="tools-grid" id="toolsGrid" aria-live="polite"></div>
+      <div class="empty-state" id="emptyState" hidden><div class="empty-icon">⌕</div><h3>No tools found</h3><p>Try another search or choose a different category.</p><button class="button button-secondary" id="resetSearch">Reset search</button></div>
+    </section>
+
+    <section class="feature-band section-wrap" id="how-it-works">
+      <div class="feature-copy"><div class="section-kicker">BUILT FOR CURIOUS MINDS</div><h2>Less scrolling.<br><span class="gradient-text">More creating.</span></h2><p>AI moves fast. Aivanta helps you discover tools by what you want to do—not just by what's trending.</p><a class="text-link" href="#explore">Find your next tool <span>↗</span></a></div>
+      <div class="feature-list">
+        <div class="feature-item"><div class="feature-icon violet">⌕</div><div><h3>Search with purpose</h3><p>Search by tool name, category, or the task you need help with.</p></div><span class="feature-number">01</span></div>
+        <div class="feature-item"><div class="feature-icon blue">♡</div><div><h3>Save your favourites</h3><p>Keep useful tools close. Your saved list stays in this browser.</p></div><span class="feature-number">02</span></div>
+        <div class="feature-item"><div class="feature-icon mint">↗</div><div><h3>Go straight to the source</h3><p>Open each tool's official website to check its latest plans and features.</p></div><span class="feature-number">03</span></div>
+      </div>
+    </section>
+
+    <section class="submit-section section-wrap" id="submit">
+      <div class="submit-card">
+        <div class="submit-glow"></div>
+        <div class="submit-content"><div class="section-kicker">HELP US GROW</div><h2>Know a tool we should add?</h2><p>Send us your suggestion and help make Aivanta more useful for everyone.</p>
+          <a class="button button-primary" href="mailto:hello@aivanta.example?subject=Aivanta%20AI%20tool%20suggestion">Suggest a tool <span>↗</span></a>
+          <small>Demo contact link — replace this email before launching publicly.</small>
+        </div>
+        <div class="submit-art" aria-hidden="true"><div class="art-ring ring-1"></div><div class="art-ring ring-2"></div><div class="art-core">✦</div><div class="art-orb orb-1">AI</div><div class="art-orb orb-2">✧</div><div class="art-orb orb-3">⌘</div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#"><img src="logo.svg" alt="" width="30" height="30"><span>Aivanta<span class="brand-ai"> AI</span></span></a>
+    <p>Discover your next advantage.</p>
+    <div class="footer-right"><span>Independent directory · Not affiliated with listed tools</span><span>© <span id="year"></span> Aivanta AI</span></div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
